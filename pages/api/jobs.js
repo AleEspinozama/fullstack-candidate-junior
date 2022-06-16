@@ -1,9 +1,7 @@
 import jobs from "../../data/jobs";
 
 export default async (req, res) => {
-  res.statusCode = 200;
-
-  if (req.query) {
+   res.statusCode = 200;
     const filterval = req.query;
     const type = Object.keys(filterval)[0];
     const filter = Object.values(filterval)[0];
@@ -69,7 +67,7 @@ export default async (req, res) => {
         res.json({ jobs: jobs });
         break;
     }
-  }
+
   // @todo: implement filters and search
   // @todo: implement automated tests
 };
